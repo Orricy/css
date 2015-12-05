@@ -1,0 +1,164 @@
+/*sass --watch style.scss:style.css*/
+@import url(bootstrap.min.css);
+@font-face {
+  font-family: 'caviar_dreamsbold';
+  src: url("fonts/Caviar_Dreams_Bold-webfont.eot");
+  src: url("fonts/Caviar_Dreams_Bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/Caviar_Dreams_Bold-webfont.woff") format("woff"), url("fonts/Caviar_Dreams_Bold-webfont.ttf") format("truetype"), url("fonts/Caviar_Dreams_Bold-webfont.svg#caviar_dreamsbold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'sinanova-regularregular';
+  src: url("fonts/SinaNovaReg-webfont.eot");
+  src: url("fonts/SinaNovaReg-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/SinaNovaReg-webfont.woff2") format("woff2"), url("fonts/SinaNovaReg-webfont.woff") format("woff"), url("fonts/SinaNovaReg-webfont.ttf") format("truetype"), url("fonts/SinaNovaReg-webfont.svg#sinanova-regularregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'robotolight';
+  src: url("fonts/Roboto-Light-webfont.eot");
+  src: url("fonts/Roboto-Light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/Roboto-Light-webfont.woff") format("woff"), url("fonts/Roboto-Light-webfont.ttf") format("truetype"), url("fonts/Roboto-Light-webfont.svg#robotolight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+body {
+  background-image: url(textures/seamlesstexture1_1200.jpg); }
+
+article {
+  background-image: url(textures/Classic-45-degree.jpg); }
+
+header #logoContent {
+  background-color: #f3efea; }
+  header #logoContent .logo {
+    margin-top: 1%; }
+    header #logoContent .logo img {
+      margin: 10% 0%; }
+    header #logoContent .logo a:hover {
+      text-decoration: none; }
+    header #logoContent .logo h1 {
+      color: #ad8c1c;
+      font-size: 3em;
+      font-family: 'caviar_dreamsbold';
+      text-transform: uppercase; }
+    header #logoContent .logo h1:hover {
+      color: #b77a37; }
+header #navbar {
+  padding-top: 1%;
+  background-image: url(textures/Classic-45-nav.jpg); }
+  header #navbar ul {
+    margin: 0;
+    padding: 0; }
+  header #navbar nav {
+    margin-bottom: 1%; }
+    header #navbar nav li {
+      display: inline-block;
+      /*margin-right: 5%;*/ }
+      header #navbar nav li a {
+        /*border: 2px solid $goldenText;*/
+        padding: 1% 15px;
+        font-size: 1.7em;
+        color: #ad8c1c; }
+    header #navbar nav .menu-item-12, header #navbar nav .menu-item-556 {
+      /*@extend .col-md-3;*/
+      /*left: 0%;*/ }
+    header #navbar nav .menu-item-13, header #navbar nav .menu-item-558 {
+      /*margin-left: 1%;*/ }
+    header #navbar nav .menu-item-15, header #navbar nav .menu-item-557 {
+      /*margin-left: 35%;*/ }
+    header #navbar nav a:hover {
+      /*border: 2px solid $darkerGoldenText;*/
+      text-decoration: none;
+      color: #b77a37; }
+
+.content {
+  margin-top: 3%;
+  margin-bottom: 3%; }
+  .content #presentation {
+    color: #ad8c1c;
+    border: 1px solid #b77a37;
+    padding-bottom: 3%; }
+    .content #presentation h3 {
+      margin-top: 3%;
+      margin-bottom: 4%; }
+    .content #presentation p {
+      font-family: 'robotolight'; }
+  .content .fullWidthImg {
+    width: 100%; }
+
+.page-title {
+  display: none; }
+
+.woocommerce-result-count {
+  display: none; }
+
+.woocommerce-ordering {
+  display: none; }
+
+.woocommerce-breadcrumb {
+  display: none; }
+
+.products {
+  text-align: center; }
+  .products li {
+    display: inline-block;
+    width: 30%;
+    margin: 0% 0.5%;
+    margin-bottom: 1%; }
+    .products li a img {
+      width: 100%;
+      height: auto;
+      box-shadow: 8px 8px 3px #555; }
+    .products li a h3, .products li a .price {
+      display: none; }
+    .products li .add_to_cart_button, .products li .product_type_simple, .products li .button {
+      display: none; }
+
+.woocommerce-pagination {
+  text-align: center; }
+  .woocommerce-pagination .page-numbers li {
+    display: inline-block;
+    margin: 0% 0.5%; }
+
+#sidebar {
+  display: none; }
+
+footer {
+  background-color: white; }
+  footer #socialNetwork {
+    background-color: rgba(199, 178, 153, 0.13);
+    padding-bottom: 1%; }
+    footer #socialNetwork h3 {
+      margin-top: 0%;
+      font-size: 1.5em; }
+    footer #socialNetwork .socialBtn {
+      display: inline-block;
+      width: 42px;
+      height: 42px;
+      background-size: contain; }
+    footer #socialNetwork .facebook {
+      background-image: url("social/facebook.svg"); }
+    footer #socialNetwork .twitter {
+      background-image: url("social/twitter-icon.svg"); }
+    footer #socialNetwork .google-plus {
+      background-image: url("social/google-plus.svg"); }
+    footer #socialNetwork .pinterest {
+      background-image: url("social/Pinterest.svg"); }
+  footer h3 {
+    color: #ad8c1c; }
+  footer h4 {
+    font-size: 3em; }
+  footer section {
+    margin-top: 2%;
+    color: #ad8c1c; }
+    footer section p {
+      font-family: 'robotolight';
+      line-height: 1.2em;
+      font-size: 1em; }
+    footer section .fa {
+      font-size: 3em; }
+    footer section a {
+      color: #ad8c1c;
+      font-size: 1.9em;
+      line-height: 4em; }
+    footer section a:hover {
+      text-decoration: none;
+      color: #765500; }
+
+/*# sourceMappingURL=style.css.map */

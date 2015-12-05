@@ -1,0 +1,238 @@
+/*sass --watch style.scss:style.css*/
+@import "bootstrap.min.css";
+
+$whiteColor : white;
+$goldenText : #ad8c1c;
+$darkerGoldenText : #b77a37;
+$footerText : #bfbfbf;
+
+$headerBg : #f3efea;
+$navbarBg : rgba(199,178,153,0.20);
+$socialbarBg : rgba(199,178,153,0.13);
+
+$classic : url(textures/Classic-45-degree.jpg);
+$paper : url(textures/seamlesstexture1_1200.jpg);
+$classicNav : url(textures/Classic-45-nav.jpg);
+
+@font-face {
+    font-family: 'caviar_dreamsbold';
+    src: url('fonts/Caviar_Dreams_Bold-webfont.eot');
+    src: url('fonts/Caviar_Dreams_Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Caviar_Dreams_Bold-webfont.woff') format('woff'),
+         url('fonts/Caviar_Dreams_Bold-webfont.ttf') format('truetype'),
+         url('fonts/Caviar_Dreams_Bold-webfont.svg#caviar_dreamsbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'sinanova-regularregular';
+    src: url('fonts/SinaNovaReg-webfont.eot');
+    src: url('fonts/SinaNovaReg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/SinaNovaReg-webfont.woff2') format('woff2'),
+         url('fonts/SinaNovaReg-webfont.woff') format('woff'),
+         url('fonts/SinaNovaReg-webfont.ttf') format('truetype'),
+         url('fonts/SinaNovaReg-webfont.svg#sinanova-regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotolight';
+    src: url('fonts/Roboto-Light-webfont.eot');
+    src: url('fonts/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-Light-webfont.woff') format('woff'),
+         url('fonts/Roboto-Light-webfont.ttf') format('truetype'),
+         url('fonts/Roboto-Light-webfont.svg#robotolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+	background-image: $paper;
+}
+
+article{
+	background-image: $classic;
+}
+
+header{
+	#logoContent{
+		background-color: $headerBg;
+		.logo{
+			margin-top: 1%;
+			img{
+				margin: 10% 0%;
+			}
+			a:hover{
+				text-decoration:none;
+			}
+			h1{
+				color: $goldenText;
+				font-size: 3em;
+				font-family: 'caviar_dreamsbold';
+				text-transform: uppercase;
+			}
+			h1:hover{
+				color: $darkerGoldenText;
+			}
+		}
+	}
+	#navbar{
+		padding-top: 1%;
+		background-image: $classicNav;
+		ul{
+			margin: 0;
+			padding: 0;
+		}
+		nav{
+			margin-bottom: 1%;
+			li{
+				display: inline-block;
+				/*margin-right: 5%;*/
+				a{
+					/*border: 2px solid $goldenText;*/
+					padding: 1% 15px;
+					font-size: 1.7em;
+					color: $goldenText;
+				}
+			}
+			.menu-item-12, .menu-item-556{
+				/*@extend .col-md-3;*/
+				/*left: 0%;*/
+			}
+			.menu-item-13, .menu-item-558{
+				/*margin-left: 1%;*/
+			}
+			.menu-item-15, .menu-item-557{
+				/*margin-left: 35%;*/
+			}
+			a:hover{
+				/*border: 2px solid $darkerGoldenText;*/
+				text-decoration: none;
+				color: $darkerGoldenText;
+			}
+		}
+	}
+	
+}
+.content{
+	margin-top: 3%;
+	margin-bottom: 3%;
+	#presentation{
+		color: $goldenText;
+		border: 1px solid $darkerGoldenText;
+		padding-bottom: 3%;
+		h3{
+			margin-top: 3%;
+			margin-bottom: 4%;
+		}
+		p{
+			font-family: 'robotolight';
+		}
+	}
+	.fullWidthImg{
+		width: 100%;
+	}
+}
+.page-title{
+	display: none;
+}
+.woocommerce-result-count{
+	display: none;
+}
+.woocommerce-ordering{
+	display: none;
+}
+.woocommerce-breadcrumb{
+	display: none;
+}
+.products{
+	text-align: center;
+	li{
+		display: inline-block;
+		width: 30%;
+		margin: 0% 0.5%;
+		margin-bottom: 1%;
+		a{
+			img{
+				width: 100%;
+				height: auto;
+				box-shadow: 8px 8px 3px #555;
+			}
+			h3, .price{
+				display: none;
+			}
+		}
+		.add_to_cart_button, .product_type_simple, .button{
+			display: none;
+		}
+	}
+}
+.woocommerce-pagination{
+	text-align: center;
+	.page-numbers{
+		li{
+			display: inline-block;
+			margin: 0% 0.5%;
+		}
+	}
+}
+#sidebar{
+	display: none;
+}
+footer{
+	background-color: white;
+	#socialNetwork{
+		background-color: $socialbarBg;
+		padding-bottom: 1%;
+		h3{
+			margin-top: 0%;
+			font-size: 1.5em;
+		}
+		.socialBtn{
+			display: inline-block;
+			width: 42px;
+			height: 42px;
+			background-size: contain;
+		}
+		.facebook{
+			background-image: url('social/facebook.svg');
+		}
+		.twitter{
+			background-image: url('social/twitter-icon.svg');
+		}
+		.google-plus{
+			background-image: url('social/google-plus.svg');
+		}
+		.pinterest{
+			background-image: url('social/Pinterest.svg');
+		}
+	}
+	h3{
+		color: $goldenText;
+	}
+	h4{
+		font-size: 3em;
+	}
+	section{
+		margin-top: 2%;
+		color: $goldenText;
+		p{
+			font-family: 'robotolight';
+			line-height: 1.2em;
+			font-size: 1em;
+		}
+		.fa{
+			font-size: 3em;
+		}
+		a{
+			color: $goldenText;
+			font-size: 1.9em;
+			line-height: 4em;
+
+		}
+		a:hover{
+			text-decoration: none;
+			color: $goldenText - 55;
+		}
+	}
+}
