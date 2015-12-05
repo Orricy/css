@@ -872,7 +872,7 @@ figure {
 img {
   vertical-align: middle; }
 
-.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+.img-responsive, #content .product .images a img, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
   display: block;
   width: 100% \9;
   max-width: 100%;
@@ -1248,7 +1248,7 @@ pre code {
   margin-right: -15px;
   margin-left: -15px; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, header #navbar nav .menu-item-13, header #navbar nav .menu-item-558, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, header #navbar nav .menu-item-12, header #navbar nav .menu-item-556, header #navbar nav .menu-item-15, header #navbar nav .menu-item-557, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, header #navbar nav .menu-item-13, header #navbar nav .menu-item-558, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, header #navbar nav .menu-item-12, header #navbar nav .menu-item-556, header #navbar nav .menu-item-15, header #navbar nav .menu-item-557, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, #content .product .images, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, #content .product .images a, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-right: 15px;
@@ -1567,10 +1567,10 @@ pre code {
   .col-sm-offset-0 {
     margin-left: 0; } }
 @media (min-width: 992px) {
-  .col-md-1, .col-md-2, header #navbar nav .menu-item-13, header #navbar nav .menu-item-558, .col-md-3, .col-md-4, header #navbar nav .menu-item-12, header #navbar nav .menu-item-556, header #navbar nav .menu-item-15, header #navbar nav .menu-item-557, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1, .col-md-2, header #navbar nav .menu-item-13, header #navbar nav .menu-item-558, .col-md-3, .col-md-4, header #navbar nav .menu-item-12, header #navbar nav .menu-item-556, header #navbar nav .menu-item-15, header #navbar nav .menu-item-557, .col-md-5, #content .product .images, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, #content .product .images a {
     float: left; }
 
-  .col-md-12 {
+  .col-md-12, #content .product .images a {
     width: 100%; }
 
   .col-md-11 {
@@ -1591,7 +1591,7 @@ pre code {
   .col-md-6 {
     width: 50%; }
 
-  .col-md-5 {
+  .col-md-5, #content .product .images {
     width: 41.66666667%; }
 
   .col-md-4, header #navbar nav .menu-item-12, header #navbar nav .menu-item-556, header #navbar nav .menu-item-15, header #navbar nav .menu-item-557 {
@@ -5228,7 +5228,8 @@ header #logoContent {
       color: #b77a37; }
 header #navbar {
   padding-top: 1%;
-  background-image: url(textures/Classic-45-nav.jpg); }
+  background-image: url(textures/Classic-45-nav.jpg);
+  margin-bottom: 3%; }
   header #navbar ul {
     margin: 0;
     padding: 0; }
@@ -5253,8 +5254,8 @@ header #navbar {
       text-decoration: none;
       color: #b77a37; }
 
+/*my div*/
 .content {
-  margin-top: 3%;
   margin-bottom: 3%; }
   .content #presentation {
     color: #ad8c1c;
@@ -5267,6 +5268,10 @@ header #navbar {
       font-family: 'robotolight'; }
   .content .fullWidthImg {
     width: 100%; }
+
+/*woocommerce div*/
+#content .product .images a img {
+  margin: 0 auto; }
 
 .page-title {
   display: none; }

@@ -83,6 +83,7 @@ header{
 	#navbar{
 		padding-top: 1%;
 		background-image: $classicNav;
+		margin-bottom: 3%;
 		ul{
 			margin: 0;
 			padding: 0;
@@ -121,8 +122,8 @@ header{
 	}
 	
 }
+/*my div*/
 .content{
-	margin-top: 3%;
 	margin-bottom: 3%;
 	#presentation{
 		color: $goldenText;
@@ -138,6 +139,21 @@ header{
 	}
 	.fullWidthImg{
 		width: 100%;
+	}
+}
+/*woocommerce div*/
+#content{
+	.product{
+		.images{
+			@extend .col-md-5;
+			a{
+				@extend .col-md-12;
+				img{
+					@extend .img-responsive;
+					margin: 0 auto;
+				}
+			}
+		}
 	}
 }
 .page-title{
