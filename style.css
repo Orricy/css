@@ -1248,7 +1248,7 @@ pre code {
   margin-right: -15px;
   margin-left: -15px; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, header #navbar nav .menu-item-13, header #navbar nav .menu-item-558, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, header #navbar nav .menu-item-12, header #navbar nav .menu-item-556, header #navbar nav .menu-item-15, header #navbar nav .menu-item-557, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, #content .product .images, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, #content .product .images a, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, header #navbar nav .menu-item-13, header #navbar nav .menu-item-558, #content .product .summary .title-container, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, header #navbar nav .menu-item-12, header #navbar nav .menu-item-556, header #navbar nav .menu-item-15, header #navbar nav .menu-item-557, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, #content .product .images, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, #content .product .summary, #content .product .images a, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-right: 15px;
@@ -1567,10 +1567,10 @@ pre code {
   .col-sm-offset-0 {
     margin-left: 0; } }
 @media (min-width: 992px) {
-  .col-md-1, .col-md-2, header #navbar nav .menu-item-13, header #navbar nav .menu-item-558, .col-md-3, .col-md-4, header #navbar nav .menu-item-12, header #navbar nav .menu-item-556, header #navbar nav .menu-item-15, header #navbar nav .menu-item-557, .col-md-5, #content .product .images, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, #content .product .images a {
+  .col-md-1, .col-md-2, header #navbar nav .menu-item-13, header #navbar nav .menu-item-558, #content .product .summary .title-container, .col-md-3, .col-md-4, header #navbar nav .menu-item-12, header #navbar nav .menu-item-556, header #navbar nav .menu-item-15, header #navbar nav .menu-item-557, .col-md-5, #content .product .images, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, #content .product .summary, #content .product .images a {
     float: left; }
 
-  .col-md-12, #content .product .images a {
+  .col-md-12, #content .product .summary, #content .product .images a {
     width: 100%; }
 
   .col-md-11 {
@@ -1600,7 +1600,7 @@ pre code {
   .col-md-3 {
     width: 25%; }
 
-  .col-md-2, header #navbar nav .menu-item-13, header #navbar nav .menu-item-558 {
+  .col-md-2, header #navbar nav .menu-item-13, header #navbar nav .menu-item-558, #content .product .summary .title-container {
     width: 16.66666667%; }
 
   .col-md-1 {
@@ -1705,7 +1705,7 @@ pre code {
   .col-md-offset-6 {
     margin-left: 50%; }
 
-  .col-md-offset-5 {
+  .col-md-offset-5, #content .product .summary .title-container {
     margin-left: 41.66666667%; }
 
   .col-md-offset-4 {
@@ -5270,6 +5270,13 @@ header #navbar {
     width: 100%; }
 
 /*woocommerce div*/
+#content .product .summary .title-container {
+  height: 12.5vw;
+  border: 5px solid #ad8c1c;
+  border-radius: 50%; }
+#content .product .summary .product_title {
+  text-align: center;
+  margin-top: 50%; }
 #content .product .images a img {
   margin: 0 auto; }
 

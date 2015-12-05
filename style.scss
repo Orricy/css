@@ -144,6 +144,20 @@ header{
 /*woocommerce div*/
 #content{
 	.product{
+		.summary{
+			@extend .col-md-12;
+			.title-container{
+				@extend .col-md-2;
+				@extend .col-md-offset-5;
+				height: 12.5vw;
+				border: 5px solid $goldenText;
+				border-radius: 50%;
+			}
+			.product_title{
+				text-align: center;
+				margin-top: 50%;
+			}
+		}
 		.images{
 			@extend .col-md-5;
 			a{
