@@ -146,26 +146,45 @@ header{
 	.product{
 		.summary{
 			@extend .col-md-12;
+			border: 3px solid $goldenText;
+			margin-top: 5%;
+			margin-bottom: 1%;
 			.title-container{
 				@extend .col-md-2;
 				@extend .col-md-offset-5;
+				margin-top: -8%;
 				height: 12.5vw;
 				border: 5px solid $goldenText;
 				border-radius: 50%;
+				background-color: white;
 			}
 			.product_title{
 				text-align: center;
 				margin-top: 50%;
 			}
+			.product-description{
+				margin-top: 1%;
+				text-align: center;
+			}
+			.price,.stock,.in-stock,.cart,.product_meta{
+				display: none;
+			}
 		}
 		.images{
-			@extend .col-md-5;
+			@extend .col-md-6;
 			a{
 				@extend .col-md-12;
 				img{
 					@extend .img-responsive;
 					margin: 0 auto;
 				}
+			}
+		}
+		.woocommerce-tabs{
+			@extend .col-md-6;
+			border: 2px solid $goldenText;
+			#tab-reviews{
+				display: none;
 			}
 		}
 	}
