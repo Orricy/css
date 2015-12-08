@@ -153,7 +153,7 @@ header{
 				@extend .col-md-2;
 				@extend .col-md-offset-5;
 				margin-top: -8%;
-				height: 12.5vw;
+				height: 10vw;
 				border: 5px solid $goldenText;
 				border-radius: 50%;
 				background-color: white;
@@ -172,19 +172,60 @@ header{
 		}
 		.images{
 			@extend .col-md-6;
+			margin-bottom: 3%;
 			a{
 				@extend .col-md-12;
 				img{
 					@extend .img-responsive;
 					margin: 0 auto;
+					min-width: 100%;
 				}
 			}
 		}
 		.woocommerce-tabs{
 			@extend .col-md-6;
 			border: 2px solid $goldenText;
+			border-bottom: none;
 			#tab-reviews{
 				display: none;
+			}
+			.wc-tab{
+				margin-top: 4%;
+				h2{
+					display: none;
+				}
+			}
+			.wc-tabs{
+				display: none;
+			}
+		}
+		.stock{
+			display: none;
+		}
+		.cart{
+			@extend .col-md-6;
+			border: 2px solid $goldenText;
+			border-top: none;
+			padding-bottom: 3%;
+			text-align: center;
+			.single_variation_wrap{
+				display: block;
+			}
+			.quantity{
+				display: none;
+			}
+			button{
+				padding: 2% 4%;
+				margin-top: 2%;
+				border: 2px solid $goldenText - 10;
+				border-radius: 10%;
+				background-color: white;
+				font-size: 2em;
+				color: $goldenText - 10;
+			}
+			button:hover{
+				background-color: $goldenText - 10;
+				color: white;
 			}
 		}
 	}
