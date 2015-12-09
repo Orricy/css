@@ -238,6 +238,7 @@ header{
 #contenu{
 	.woocommerce{
 		@extend .col-md-12;
+		margin-bottom: 1.5%;
 		table{
 			@extend .col-md-12;
 			tr{
@@ -337,6 +338,142 @@ header{
 				}
 			}
 		}
+		#order_review{
+			thead{
+				th{
+					@extend .col-md-4;
+					border: 2px solid black;
+				}
+			}
+			tbody{
+				td{
+					@extend .col-md-4;
+					border: 2px solid black;
+				}
+			}
+			tfoot{
+				font-size: 1.5em;
+				th{
+					@extend .col-md-3;
+				}
+				td{
+					@extend .col-md-9;
+				}
+			}
+			.place-order{
+				@extend .col-md-12;
+				#place_order{
+					@extend .col-md-3;
+					@extend .col-md-offset-1;
+					padding: 1% 2%;
+					font-size: 2em;
+				}
+			}
+		}
+		/*connexion*/
+		#customer_login{
+			.col-1{
+				@extend .col-md-6;
+				label:not(.inline){
+					@extend .col-md-6;
+					margin-bottom: 1%;
+				}
+				.inline{
+					@extend .col-md-6;
+					@extend .col-md-offset-3;
+					margin-bottom: 1%;
+					#rememberme{
+						@extend .col-md-2;
+					}
+				}
+				input:not(.button){
+					@extend .col-md-6;
+					margin-bottom: 1%;
+				}
+				.button{
+					@extend .col-md-3;
+					padding: 0% 2%;
+					border: 2px solid black;
+					border-radius: 5px;
+					background-color: white;
+				}
+				.button:hover{
+					background-color: black;
+					color: white;
+				}
+			}
+			.col-2{
+				@extend .col-md-6;
+				label{
+					@extend .col-md-6;
+					margin-bottom: 1%;
+				}
+				input:not(.button){
+					@extend .col-md-6;
+					margin-bottom: 1%;
+				}
+				.button{
+					@extend .col-md-3;
+					padding: 0% 2%;
+					border: 2px solid black;
+					border-radius: 5px;
+					background-color: white;
+				}
+				.button:hover{
+					background-color: black;
+					color: white;
+				}
+			}
+		}
+	}
+	#customer_details{
+		.col-1{
+			@extend .col-md-6;
+			margin-bottom: 1.5%;
+			.woocommerce-billing-fields{
+				label{
+					@extend .col-md-5;
+					margin-top: 0.5%;
+				}
+				input,select{
+					@extend .col-md-7;
+					margin-top: 1.3%;
+				}
+				#billing_address_2{
+					@extend .col-md-offset-5;
+				}
+			}
+		}
+		.col-2{
+			@extend .col-md-6;
+			border-left: 2px solid $goldenText;
+			margin-bottom: 1.5%;
+			.woocommerce-shipping-fields{
+				.shipping_address{
+					label{
+						@extend .col-md-5;
+					}
+					input,select{
+						@extend .col-md-7;
+						margin-top: 1%;
+					}
+					#shipping_address_2{
+						@extend .col-md-offset-5;
+					}
+					
+				}
+				#order_comments_field{
+					label{
+						@extend .col-md-5;
+					}
+					#order_comments{
+						display: inline-block;
+						margin-top: 1%;
+						@extend .col-md-7;
+					}
+				}
+			}
+		}
 	}
 	.cart-collaterals{
 		.cart_totals{
@@ -426,7 +563,7 @@ header{
 }
 /*remove title of page or section*/
 section{
-	.banner{
+	.banner,.voile{
 		display: none;
 	}
 }
