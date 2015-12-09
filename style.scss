@@ -143,6 +143,7 @@ header{
 }
 /*woocommerce div*/
 #content{
+	/*for single product*/
 	.product{
 		.summary{
 			@extend .col-md-12;
@@ -170,6 +171,7 @@ header{
 				display: none;
 			}
 		}
+		/*for display pic*/
 		.images{
 			@extend .col-md-6;
 			margin-bottom: 3%;
@@ -182,6 +184,7 @@ header{
 				}
 			}
 		}
+		/* for single product info*/
 		.woocommerce-tabs{
 			@extend .col-md-6;
 			border: 2px solid $goldenText;
@@ -202,6 +205,7 @@ header{
 		.stock{
 			display: none;
 		}
+		/* for add to cart action*/
 		.cart{
 			@extend .col-md-6;
 			border: 2px solid $goldenText;
@@ -226,6 +230,153 @@ header{
 			button:hover{
 				background-color: $goldenText - 10;
 				color: white;
+			}
+		}
+	}
+}
+/* for product resume page*/
+#contenu{
+	.woocommerce{
+		@extend .col-md-12;
+		table{
+			@extend .col-md-12;
+			tr{
+				@extend .col-md-12;
+			}
+			thead{
+				font-size: 2em;
+				th{
+					@extend .col-md-2;
+					text-align: center;
+				}
+			}
+			tbody{
+				text-align: center;
+				.cart_item{
+					font-size: 2em;
+					.product-remove{
+						@extend .col-md-1;
+						margin-top: 3%;
+						font-size: 4em;
+						a{
+							color: grey;
+						}
+				    	a:hover{
+				    		text-decoration: none;
+				    		color: grey - 20;
+				    	}
+					}
+					.product-thumbnail{
+						@extend .col-md-3;
+						img{
+							@extend .img-responsive;
+							min-width: 100%;
+						}
+					}
+					.product-name,.product-price,.product-quantity,.product-subtotal{
+						@extend .col-md-2;
+						margin-top: 8%;
+						color: $goldenText;
+						a{
+							color: $goldenText;
+						}
+						a:hover{
+							color: $goldenText - 25;
+							text-decoration: none;
+						}
+					}
+				}
+				.actions{
+					@extend .col-md-12;
+					.coupon{
+						display: none;
+					}
+					.button{
+						@extend .col-md-4;
+						@extend .col-md-offset-8;
+						padding: 1% 3%;
+						background-color: white;
+						border: 2px solid $goldenText;
+						border-radius: 10px;
+						font-size: 2em;
+						color: $goldenText;
+					}
+					.button:hover{
+						background-color: $goldenText;
+						color: white;
+					}
+				}
+			}
+		}
+		/* for promo code checkout page*/
+		.woocommerce-info{
+			display: none;
+		}
+		/* for checkout page*/
+		.woocommerce-checkout{
+			.woocommerce-checkout-review-order{
+				.woocommerce-checkout-review-order-table{
+					thead{
+						th{
+							@extend .col-md-3;
+						}
+					}
+					tbody{
+						td{
+							@extend .col-md-3;
+							text-align: center;
+						}
+						.product-name{
+							margin-top: 0;
+							.product-quantity{
+								@extend .col-md-4;
+								margin-top: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.cart-collaterals{
+		.cart_totals{
+			table{
+				tbody{
+					font-size: 2em;
+					tr:not(.shipping){
+						border: 2px solid $goldenText;
+					}
+					.shipping{
+						border-left: 2px solid $goldenText;
+						border-right: 2px solid $goldenText;
+					}
+					th{
+						@extend .col-md-3;
+					}
+					td{
+						@extend .col-md-9;
+						border-left: 2px solid $goldenText;
+					}
+				}
+			}
+			.wc-proceed-to-checkout{
+				a{
+					@extend .col-md-8;
+					@extend .col-md-offset-2;
+					margin-top: 2%;
+					margin-bottom: 2%;
+					background-color: white;
+					border: 2px solid $goldenText;
+					border-radius: 15px;
+					text-align: center;
+					font-size: 3em;
+					color: $goldenText;
+				}
+				a:hover{
+					text-decoration: none;
+					background-color: $goldenText;
+					color: white;
+				}
 			}
 		}
 	}
@@ -271,6 +422,12 @@ header{
 			display: inline-block;
 			margin: 0% 0.5%;
 		}
+	}
+}
+/*remove title of page or section*/
+section{
+	.banner{
+		display: none;
 	}
 }
 #sidebar{
