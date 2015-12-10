@@ -218,6 +218,11 @@ header{
 			.quantity{
 				display: none;
 			}
+			.variations_button{
+				.quantity{
+					display: inline-block;
+				}
+			}
 			button{
 				padding: 2% 4%;
 				margin-top: 2%;

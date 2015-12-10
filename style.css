@@ -5321,6 +5321,8 @@ header #navbar {
         display: block; }
       #content .product .cart .quantity {
         display: none; }
+      #content .product .cart .variations_button .quantity {
+        display: inline-block; }
       #content .product .cart button {
         padding: 2% 4%;
         margin-top: 2%;
