@@ -52,6 +52,90 @@ $classicNav : url(textures/Classic-45-nav.jpg);
 
 body{
 	background-image: $paper;
+	/*Static page CSS*/
+	.bodyContent{
+		background-color: #f9f9f9;
+		margin-top: 2%;
+		margin-bottom: 2%;
+		color: $goldenText;
+	}
+	.conceptGR {
+		font-size: 25px;
+		margin: 50px 0;
+		border: 1px solid #ad8c1c;
+		background: url('textures/Classic-45-degree.jpg');
+	}
+	.titleConceptGR {
+		padding: 40px 0;
+	}
+	.titleFabLivGR {
+		padding: 40px 0;
+		background: url('textures/Classic-45-degree.jpg');
+		font-weight: bold;
+	}
+	.articleQuote {
+		font-weight: bold;
+		font-size: 25px;
+		h1{
+			font-weight: bold;
+		}
+	}
+	.articleFabLiv {
+		line-height: 20px;
+	}
+	.subQuote {
+		font-weight: normal;
+		font-size: 15px;
+	}
+	.textQuote {
+		line-height: 30px;
+		padding: 0 40px;
+		margin: 80px 0;
+	}
+	.underline {
+		margin: 10px 0;
+	}
+	.fabBlock {
+		margin: 70px 0 0px 0;
+	}
+	.titleFabBlock {
+		font-weight: bold;
+		font-size: 25px;
+	}
+	.proceedBlock {
+		border: 5px solid;
+		border-radius: 5px;
+		margin-bottom: 100px;
+	}
+	.underBlock {
+		margin: 25px 0;
+	}
+	.titleProceed {
+		text-decoration: underline;
+		font-weight: bold;
+	}
+	.listBlock {
+		margin-left: 40px;
+	}
+	.fabList {
+		list-style-type: disc;
+	}
+	.livBlock {
+		line-height: 25px;
+	}
+	.fabImg {
+		text-align: center;
+		margin: 20px;
+	}
+	.testImg {
+		width: 250px;
+	}
+	.textUnderline {
+		margin: 15px 0;
+	}
+	.pp_woocommerce{
+		top: 0 !important;
+	}
 }
 
 article{
@@ -92,7 +176,6 @@ header{
 			margin-bottom: 1%;
 			li{
 				display: inline-block;
-				/*margin-right: 5%;*/
 				a{
 					/*border: 2px solid $goldenText;*/
 					padding: 1% 15px;
@@ -100,23 +183,15 @@ header{
 					color: $goldenText;
 				}
 			}
-			.menu-item-12, .menu-item-556{
-				@extend .col-md-4;
-				/*left: 0%;*/
-			}
-			.menu-item-13, .menu-item-558{
-				@extend .col-md-2;
-				/*margin-left: 1%;*/
-			}
-			.menu-item-15, .menu-item-557{
-				@extend .col-md-4;
-				@extend .col-md-offset-2;
-				/*margin-left: 35%;*/
-			}
 			a:hover{
-				/*border: 2px solid $darkerGoldenText;*/
 				text-decoration: none;
 				color: $darkerGoldenText;
+			}
+			.sub-menu{
+				li{
+					background-color: rgba(255,255,255,0.5);
+					margin-top: 2%;
+				}
 			}
 		}
 	}
@@ -141,10 +216,57 @@ header{
 		width: 100%;
 	}
 }
+/* for categories page*/
+.categories-product{
+	margin-bottom: 5%;
+	padding: 15px;
+	border: 1px solid $goldenText;
+	color: $goldenText;
+	#categories-displayer{
+		margin-top: 3%;
+	}
+	.menu-categories-container{
+		@extend .col-md-12;
+		margin-top: 5%;
+		ul{
+			text-decoration: none;
+			li{
+				@extend .col-md-6;
+				@extend .col-md-offset-3;
+				padding-right: 0;
+				padding-left: 0;
+				margin-top: 1%;
+				margin-bottom: 1%;
+				a{
+					@extend .col-md-8;
+					@extend .col-md-offset-2;
+					color: $goldenText;
+					font-size: 2em;
+				}
+				a:hover{
+					border-radius: 10px;
+					background-color: rgba($darkerGoldenText, 0.3);
+					color: $goldenText - 25;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
 /*woocommerce div*/
 #content{
+	/*for persentation main site*/
+	.presentation-main{
+		color: $goldenText;
+		padding: 2%;
+		margin-bottom: 2%;
+		border: 3px solid $goldenText;
+	}
 	/*for single product*/
 	.product{
+		.entry-summary{
+			background-color: rgba(255,255,255,0.5)
+		}
 		.summary{
 			@extend .col-md-12;
 			border: 3px solid $goldenText;
@@ -160,12 +282,21 @@ header{
 				background-color: white;
 			}
 			.product_title{
+				color: $goldenText;
 				text-align: center;
 				margin-top: 50%;
+				font-weight: lighter;
 			}
 			.product-description{
 				margin-top: 1%;
 				text-align: center;
+				p{
+					color: $goldenText;
+					font-size: 1.5em;
+					strong{
+						font-size: 1.4em;
+					}
+				}
 			}
 			.price,.stock,.in-stock,.cart,.product_meta{
 				display: none;
@@ -188,7 +319,9 @@ header{
 		.woocommerce-tabs{
 			@extend .col-md-6;
 			border: 2px solid $goldenText;
+			background-color: rgba(255,255,255,0.5);
 			border-bottom: none;
+			color: $goldenText;
 			#tab-reviews{
 				display: none;
 			}
@@ -197,6 +330,10 @@ header{
 				h2{
 					display: none;
 				}
+			}
+			.panel{
+				background-color: transparent;
+				border: 0;
 			}
 			.wc-tabs{
 				display: none;
@@ -209,14 +346,27 @@ header{
 		.cart{
 			@extend .col-md-6;
 			border: 2px solid $goldenText;
+			background-color: rgba(255,255,255,0.5);
 			border-top: none;
 			padding-bottom: 3%;
 			text-align: center;
+			color: $goldenText;
 			.single_variation_wrap{
 				display: block;
 			}
 			.quantity{
 				display: none;
+			}
+			.variations{
+				.label{
+					color: $goldenText;
+					font-size: 1.2em;
+				}
+				.value{
+					select{
+						@extend .col-md-12;
+					}
+				}
 			}
 			.variations_button{
 				.quantity{
@@ -244,43 +394,75 @@ header{
 	.woocommerce{
 		@extend .col-md-12;
 		margin-bottom: 1.5%;
-		table{
-			@extend .col-md-12;
-			tr{
-				@extend .col-md-12;
-			}
+		/*for checkout page*/
+		.cart{
+			border: 5px solid $darkerGoldenText;
+			border-radius: 15px;
 			thead{
-				font-size: 2em;
 				th{
-					@extend .col-md-2;
-					text-align: center;
+					float: left;
+				}
+			}
+		}
+		/*for checkout summary*/
+		.order_details,.customer_details{
+			background-color: rgba(255,255,255,0.5);
+			border: 1px solid $goldenText;
+			padding: 15px;
+			thead{
+				th{
+					border-bottom: 1px solid $goldenText;
 				}
 			}
 			tbody{
-				text-align: center;
+				th,td{
+					border-bottom: 1px solid $goldenText;
+				}
+			}
+			tfoot{
+				th,td{
+					border-bottom: 1px solid $goldenText;
+				}
+			}
+		}
+		table{
+			thead{
+				font-size: 2em;
+				th{
+					text-align: center;
+					color: $goldenText;
+				}
+			}
+			tbody{
 				.cart_item{
+					td{
+						border-top:0;
+					}
 					font-size: 2em;
 					.product-remove{
-						@extend .col-md-1;
 						margin-top: 3%;
-						font-size: 4em;
-						a{
-							color: grey;
+						a.remove{
+							color: $goldenText !important;
+							border: 2px solid $goldenText;
 						}
-				    	a:hover{
+				    	a.remove:hover{
 				    		text-decoration: none;
-				    		color: grey - 20;
-				    	}
+				    		background-color: white;
+				    		color: $goldenText - 20 !important;
+				    		border: 2px solid $goldenText - 20;
+				    	} 
 					}
 					.product-thumbnail{
-						@extend .col-md-3;
 						img{
-							@extend .img-responsive;
+							
 							min-width: 100%;
 						}
 					}
+					.product-name{
+						font-size: 0.7em;
+					}
 					.product-name,.product-price,.product-quantity,.product-subtotal{
-						@extend .col-md-2;
+						text-align: center;
 						margin-top: 8%;
 						color: $goldenText;
 						a{
@@ -294,13 +476,14 @@ header{
 				}
 				.actions{
 					@extend .col-md-12;
+					border-top:0;
 					.coupon{
 						display: none;
 					}
 					.button{
-						@extend .col-md-4;
-						@extend .col-md-offset-8;
+						@extend .col-md-12;
 						padding: 1% 3%;
+						margin-bottom: 2%;
 						background-color: white;
 						border: 2px solid $goldenText;
 						border-radius: 10px;
@@ -320,58 +503,85 @@ header{
 		}
 		/* for checkout page*/
 		.woocommerce-checkout{
+			background-color: white;
+			border: 2px solid $darkerGoldenText;
+			padding: 15px;
+			#order_review_heading{
+				display: none;
+			}
+			#customer_details{
+				.woocommerce-billing-fields, .woocommerce-shipping-fields{
+					p{
+						@extend .col-md-12;
+						color: $goldenText;
+						label{
+							@extend .col-md-12;
+						}
+						input{
+							@extend .col-md-6;
+						}
+						select{
+							@extend .col-md-7;
+						}
+					}
+				}
+			}
 			.woocommerce-checkout-review-order{
 				.woocommerce-checkout-review-order-table{
-					thead{
-						th{
-							@extend .col-md-3;
-						}
-					}
-					tbody{
-						td{
-							@extend .col-md-3;
-							text-align: center;
-						}
-						.product-name{
+					background-color: white;
+					border: 5px solid $darkerGoldenText + 30;
+					border-radius: 15px;
+					padding: 5%;
+				}
+				tbody{
+					.product-name{
+						.product-quantity{
 							margin-top: 0;
-							.product-quantity{
-								@extend .col-md-4;
-								margin-top: 0;
-							}
+						}
+					}
+					.product-total{
+						@extend .col-md-2;
+					}
+				}
+				tfoot{
+					color: $goldenText;
+					tr:not(.shipping){
+						padding-top: 1%;
+						padding-bottom: 1%;
+						border-top: 2px solid $goldenText;
+						border-bottom: 2px solid $goldenText;
+					}
+					.cart-subtotal{
+						margin-top: 35%;
+					}
+					th,td{
+						border-top: 0;
+					}
+					.shipping{
+						p{
+							text-align: center;
+							color: darkblue - 10;
+							font-weight: normal;
 						}
 					}
 				}
-			}
-		}
-		#order_review{
-			thead{
-				th{
-					@extend .col-md-4;
-					border: 2px solid black;
-				}
-			}
-			tbody{
-				td{
-					@extend .col-md-4;
-					border: 2px solid black;
-				}
-			}
-			tfoot{
-				font-size: 1.5em;
-				th{
-					@extend .col-md-3;
-				}
-				td{
-					@extend .col-md-9;
-				}
-			}
-			.place-order{
-				@extend .col-md-12;
-				#place_order{
-					@extend .col-md-3;
-					@extend .col-md-offset-1;
-					padding: 1% 2%;
-					font-size: 2em;
+				#payment{
+					background-color: white;
+					.place-order{
+						border-top: 0;
+						text-align: center;
+						#place_order{
+							float: none;
+							background-color: white;
+							border: 2px solid $goldenText;
+							border-radius: 10px;
+							color: $goldenText;
+						}
+						#place-order:hover{
+							background-color: $goldenText;
+							color: white;
+						}
+					}
 				}
 			}
 		}
@@ -432,7 +642,7 @@ header{
 		}
 	}
 	#customer_details{
-		.col-1{
+		/*.col-1{
 			@extend .col-md-6;
 			margin-bottom: 1.5%;
 			.woocommerce-billing-fields{
@@ -478,26 +688,45 @@ header{
 					}
 				}
 			}
-		}
+		}*/
 	}
 	.cart-collaterals{
 		.cart_totals{
+			h2{
+				display: none;
+			}
 			table{
+				@extend .col-md-12;
+				color: $goldenText;
 				tbody{
 					font-size: 2em;
+					tr{
+						padding-top: 1%;
+						padding-bottom: 1%;
+					}
 					tr:not(.shipping){
-						border: 2px solid $goldenText;
+						border-top: 2px solid $goldenText;
+						border-bottom: 2px solid $goldenText;
 					}
 					.shipping{
-						border-left: 2px solid $goldenText;
-						border-right: 2px solid $goldenText;
-					}
-					th{
-						@extend .col-md-3;
-					}
-					td{
-						@extend .col-md-9;
-						border-left: 2px solid $goldenText;
+						th{
+							@extend .col-md-2;
+							@extend .col-sm-3;
+						}
+						td{
+							@extend .col-md-10;
+							@extend .col-sm-9;
+							text-align: center;
+							.woocommerce-shipping-calculator{
+								a{
+									color: $goldenText;
+									text-decoration: underline;
+								}
+								a:hover{
+									color: $goldenText - 20;
+								}
+							}
+						}
 					}
 				}
 			}
@@ -524,7 +753,9 @@ header{
 	}
 }
 .page-title{
-	display: none;
+	/*display: none;*/
+	color: $goldenText;
+	text-align: center;
 }
 .woocommerce-result-count{
 	display: none;
@@ -569,7 +800,12 @@ header{
 /*remove title of page or section*/
 section{
 	.banner,.voile{
-		display: none;
+		width: 100%;
+		display: inline-block;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: $goldenText;
 	}
 }
 #sidebar{
