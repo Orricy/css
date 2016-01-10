@@ -141,8 +141,36 @@ body{
 article{
 	background-image: $classic;
 }
-
+@media (max-device-width: 768px) {
+ 	#navbar, #navbar-register, #logoContent{
+ 		display: none;
+ 	}
+}
+@media (min-device-width: 768px) {
+ 	#menu-mobile{
+ 		display: none;
+ 	}
+}
 header{
+	#header-mobile{
+		background-color: $headerBg;
+		#menu-mobile{
+			#dl-menu{
+				z-index: 1;
+				margin-right: 0;
+				//for open menu
+				.dl-menu{
+					background-color: $goldenText;
+				}
+			}
+			.dl-trigger{
+				background-color: $goldenText;
+			}
+			.logo-mobile{
+				margin-left: 2.7%;
+			}
+		}
+	}	
 	#logoContent{
 		background-color: $headerBg;
 		.logo{
@@ -153,7 +181,7 @@ header{
 			a:hover{
 				text-decoration:none;
 			}
-			h1{
+			/*h1{
 				color: $goldenText;
 				font-size: 3em;
 				font-family: 'caviar_dreamsbold';
@@ -161,10 +189,10 @@ header{
 			}
 			h1:hover{
 				color: $darkerGoldenText;
-			}
+			}*/
 		}
 	}
-	#navbar{
+	#navbar, #navbar-register{
 		padding-top: 1%;
 		background-image: $classicNav;
 		margin-bottom: 3%;
@@ -179,7 +207,7 @@ header{
 				a{
 					/*border: 2px solid $goldenText;*/
 					padding: 1% 15px;
-					font-size: 1.7em;
+					font-size: 1.3em;
 					color: $goldenText;
 				}
 			}
@@ -195,7 +223,14 @@ header{
 			}
 		}
 	}
-	
+	#navbar-register{
+		margin-bottom: 0;
+	}
+	#navbar{
+		ul{
+			text-align: center;
+		}
+	}
 }
 /*my div*/
 .content{
@@ -263,6 +298,11 @@ header{
 		border: 3px solid $goldenText;
 	}
 	/*for single product*/
+	@media (max-device-width: 768px) {
+		.product{
+			margin-top: 12.5%;
+		}
+	}
 	.product{
 		.entry-summary{
 			background-color: rgba(255,255,255,0.5)
@@ -275,8 +315,11 @@ header{
 			.title-container{
 				@extend .col-md-2;
 				@extend .col-md-offset-5;
-				margin-top: -8%;
-				height: 10vw;
+				@extend .col-sm-offset-5;
+				@extend .col-xs-offset-5;
+				margin-top: -75px;
+				height: 150px;
+				width: 150px;
 				border: 5px solid $goldenText;
 				border-radius: 50%;
 				background-color: white;
@@ -396,6 +439,10 @@ header{
 		margin-bottom: 1.5%;
 		/*for checkout page*/
 		.cart{
+			position: relative;
+			@media screen and (max-width: 991px){
+				right: 15%;
+			}
 			border: 5px solid $darkerGoldenText;
 			border-radius: 15px;
 			thead{
@@ -732,15 +779,19 @@ header{
 			}
 			.wc-proceed-to-checkout{
 				a{
-					@extend .col-md-8;
-					@extend .col-md-offset-2;
+					@extend .col-md-4;
+					@extend .col-md-offset-4;
+					@extend .col-sm-6;
+					@extend .col-sm-offset-3;
+					@extend .col-xs-6;
+					@extend .col-xs-offset-3;
 					margin-top: 2%;
 					margin-bottom: 2%;
 					background-color: white;
 					border: 2px solid $goldenText;
 					border-radius: 15px;
 					text-align: center;
-					font-size: 3em;
+					font-size: 1.8em;
 					color: $goldenText;
 				}
 				a:hover{
@@ -768,6 +819,7 @@ header{
 }
 .products{
 	text-align: center;
+	padding-left: 0;
 	li{
 		display: inline-block;
 		width: 30%;
